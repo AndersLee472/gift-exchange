@@ -61,6 +61,15 @@ python -m SimpleHTTPServer 8000
 # 然后在浏览器访问 http://localhost:8000
 ```
 
+### 方法三：部署到Vercel ☁️
+1. Fork或克隆本仓库到您的GitHub账户
+2. 在[Vercel](https://vercel.com)中使用GitHub账户登录
+3. 点击"New Project"并导入此仓库
+4. 点击"Deploy"，Vercel会自动部署
+5. 部署完成后，获得一个类似 `https://gift-exchange-xxx.vercel.app` 的访问链接
+
+**注意**: Vercel会自动使用 `index.html` 作为入口文件，本项目已配置好 `vercel.json` 文件。
+
 ## 🎯 使用方法
 
 ### 复古街机版使用说明：
