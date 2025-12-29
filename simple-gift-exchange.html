@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>礼物交换 | Gift Exchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="simple-gift-styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="title">
+                    <span class="title-line">礼物交换</span>
+                </h1>
+                <p class="subtitle">添加朋友，开始惊喜匹配</p>
+
+                <div class="decorative-gifts">
+                    <div class="gift-box" data-gift="1">
+                        <div class="box"></div>
+                        <div class="ribbon vertical"></div>
+                        <div class="ribbon horizontal"></div>
+                        <div class="bow"></div>
+                    </div>
+                    <div class="gift-box" data-gift="2">
+                        <div class="box"></div>
+                        <div class="ribbon vertical"></div>
+                        <div class="ribbon horizontal"></div>
+                        <div class="bow"></div>
+                    </div>
+                    <div class="gift-box" data-gift="3">
+                        <div class="box"></div>
+                        <div class="ribbon vertical"></div>
+                        <div class="ribbon horizontal"></div>
+                        <div class="bow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="participants-section">
+                <div class="section-header">
+                    <h2 class="section-title">参与者</h2>
+                    <p class="section-description">添加所有参与者的名字</p>
+                </div>
+
+                <div class="add-participant-form">
+                    <input type="text" id="participant-name" placeholder="输入名字" class="input-field">
+                    <button class="btn-primary" id="add-participant-btn">添加</button>
+                </div>
+
+                <div class="participants-grid" id="participants-grid">
+                    <!-- Participants will be dynamically added here -->
+                </div>
+            </section>
+
+            <section class="match-section" id="match-section">
+                <div class="match-display">
+                    <div class="your-assignment">
+                        <h3 class="assignment-title">你的礼物对象</h3>
+                        <div class="assignment-card">
+                            <div class="gift-icon">🎁</div>
+                            <p class="assignment-name" id="assigned-name">等待匹配...</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-large" id="start-match-btn">
+                        <span>开始随机匹配</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 礼物交换 | 惊喜即将开始</p>
+        </div>
+    </footer>
+
+    <script src="simple-gift-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>礼物交换派对 | Friend Gift Exchange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gift-styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="title">
+                    <span class="title-line">礼物交换</span>
+                    <span class="title-line accent">派对</span>
+                </h1>
+                <p class="subtitle">与朋友们分享惊喜与温暖</p>
+
+                <div class="decorative-gifts">
+                    <div class="gift-box" data-gift="1">
+                        <div class="box"></div>
+                        <div class="ribbon vertical"></div>
+                        <div class="ribbon horizontal"></div>
+                        <div class="bow"></div>
+                    </div>
+                    <div class="gift-box" data-gift="2">
+                        <div class="box"></div>
+                        <div class="ribbon vertical"></div>
+                        <div class="ribbon horizontal"></div>
+                        <div class="bow"></div>
+                    </div>
+                    <div class="gift-box" data-gift="3">
+                        <div class="box"></div>
+                        <div class="ribbon vertical"></div>
+                        <div class="ribbon horizontal"></div>
+                        <div class="bow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="setup-section">
+                <div class="section-header">
+                    <h2 class="section-title">创建交换活动</h2>
+                    <p class="section-description">邀请好友参与，设置预算，开始惊喜之旅</p>
+                </div>
+
+                <div class="form-card">
+                    <div class="form-group">
+                        <label for="group-name">活动名称</label>
+                        <input type="text" id="group-name" placeholder="例如：2024圣诞礼物交换" class="input-field">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">预算范围</label>
+                        <select id="budget" class="input-field">
+                            <option value="">选择预算范围</option>
+                            <option value="50">¥50 以下</option>
+                            <option value="100">¥50 - ¥100</option>
+                            <option value="200">¥100 - ¥200</option>
+                            <option value="500">¥200 - ¥500</option>
+                            <option value="unlimited">不限预算</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="event-date">活动日期</label>
+                        <input type="date" id="event-date" class="input-field">
+                    </div>
+
+                    <button class="btn-primary" id="create-group-btn">
+                        <span>创建活动</span>
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <section class="participants-section">
+                <div class="section-header">
+                    <h2 class="section-title">参与者</h2>
+                    <p class="section-description">添加参与者的名字，看看谁将收到你的礼物</p>
+                </div>
+
+                <div class="participants-grid" id="participants-grid">
+                    <!-- Participants will be dynamically added here -->
+                </div>
+
+                <div class="add-participant-card">
+                    <input type="text" id="participant-name" placeholder="输入朋友的名字" class="input-field">
+                    <button class="btn-secondary" id="add-participant-btn">添加朋友</button>
+                </div>
+            </section>
+
+            <section class="match-section" id="match-section" style="display: none;">
+                <div class="section-header">
+                    <h2 class="section-title">礼物匹配</h2>
+                    <p class="section-description">准备好见证奇迹了吗？</p>
+                </div>
+
+                <div class="match-display">
+                    <div class="your-assignment">
+                        <h3 class="assignment-title">你的礼物对象</h3>
+                        <div class="assignment-card">
+                            <div class="gift-icon">🎁</div>
+                            <p class="assignment-name" id="assigned-name">点击开始匹配</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-large" id="start-match-btn">
+                        <span>开始随机匹配</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="suggestions-section">
+                <div class="section-header">
+                    <h2 class="section-title">礼物创意</h2>
+                    <p class="section-description">为你的朋友挑选完美的礼物</p>
+                </div>
+
+                <div class="suggestions-grid">
+                    <div class="suggestion-card">
+                        <div class="suggestion-icon">📚</div>
+                        <h4>书籍</h4>
+                        <p>选择一本好书，分享知识和故事</p>
+                    </div>
+
+                    <div class="suggestion-card">
+                        <div class="suggestion-icon">☕</div>
+                        <h4>咖啡/茶</h4>
+                        <p>温暖的饮品，温暖的心意</p>
+                    </div>
+
+                    <div class="suggestion-card">
+                        <div class="suggestion-icon">🎨</div>
+                        <h4>手工艺品</h4>
+                        <p>独特的手工礼物，独一无二</p>
+                    </div>
+
+                    <div class="suggestion-card">
+                        <div class="suggestion-icon">🌿</div>
+                        <h4>绿植</h4>
+                        <p>带来生机的绿色伙伴</p>
+                    </div>
+
+                    <div class="suggestion-card">
+                        <div class="suggestion-icon">🍫</div>
+                        <h4>美食</h4>
+                        <p>精致的甜点或零食</p>
+                    </div>
+
+                    <div class="suggestion-card">
+                        <div class="suggestion-icon">🕯️</div>
+                        <h4>香薰蜡烛</h4>
+                        <p>营造温馨的氛围</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 礼物交换派对 | 用心准备，惊喜分享</p>
+        </div>
+    </footer>
+
+    <script src="gift-script.js"></script>
+</body>
+</html>

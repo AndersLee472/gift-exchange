@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFT EXCHANGE | 1980s ARCADE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="retro-gift-styles.css">
+</head>
+<body>
+    <!-- CRT Screen Effects -->
+    <div class="crt-screen">
+        <div class="scanlines"></div>
+        <div class="vignette"></div>
+        <div class="flicker"></div>
+
+        <div class="game-container">
+            <!-- Header -->
+            <header class="game-header">
+                <div class="logo">
+                    <h1 class="game-title">GIFT</h1>
+                    <h1 class="game-title accent">EXCHANGE</h1>
+                </div>
+                <div class="game-subtitle">INSERT COIN TO BEGIN</div>
+            </header>
+
+            <!-- Main Game Area -->
+            <main class="game-main">
+                <!-- Score/Status Display -->
+                <div class="status-display">
+                    <div class="status-item">
+                        <span class="status-label">PLAYERS:</span>
+                        <span class="status-value" id="player-count">01</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">SCORE:</span>
+                        <span class="status-value" id="score">000000</span>
+                    </div>
+                </div>
+
+                <!-- Player Input Section -->
+                <section class="player-section">
+                    <div class="section-title">INSERT PLAYER NAME</div>
+                    <div class="input-container">
+                        <input type="text"
+                               id="player-name"
+                               class="pixel-input"
+                               maxlength="12"
+                               placeholder="TYPE NAME..."
+                               autocomplete="off">
+                        <button class="pixel-btn insert-coin" id="add-player-btn">
+                            INSERT COIN
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Player List -->
+                <section class="players-list-section">
+                    <div class="section-title">ACTIVE PLAYERS</div>
+                    <div class="players-grid" id="players-grid">
+                        <!-- Players will be dynamically added here -->
+                    </div>
+                </section>
+
+                <!-- Game Action Section -->
+                <section class="game-action-section" id="game-action-section">
+                    <div class="section-title">GIFT ASSIGNMENT</div>
+
+                    <div class="assignment-display">
+                        <div class="assignment-label">YOUR TARGET:</div>
+                        <div class="assignment-box" id="assignment-box">
+                            <div class="pixel-art-gift">🎁</div>
+                            <div class="assignment-text" id="assignment-text">PRESS START</div>
+                        </div>
+                    </div>
+
+                    <button class="pixel-btn start-game" id="start-game-btn">
+                        START GAME
+                    </button>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="game-footer">
+                <div class="footer-text">© 1984 ARCADE EDITION | USE ↑↓←→ TO NAVIGATE</div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Easter Egg Modal -->
+    <div class="easter-egg-modal" id="easter-egg-modal">
+        <div class="egg-content">
+            <div class="egg-title">CONGRATULATIONS!</div>
+            <div class="egg-text">YOU FOUND THE SECRET!</div>
+            <div class="egg-gift">🎮🎁🎊</div>
+            <div class="egg-subtext">EXTRA LIFE GRANTED!</div>
+        </div>
+    </div>
+
+    <script src="retro-gift-script.js"></script>
+</body>
+</html>
